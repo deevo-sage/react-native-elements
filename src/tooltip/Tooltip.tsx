@@ -248,10 +248,10 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   };
 
   componentDidMount() {
-    // wait to compute onLayout values.
+    // wait to compute onLayout values.\
+
     requestAnimationFrame(this.getElementPosition);
   }
-
   getElementPosition = () => {
     const { skipAndroidStatusBar } = this.props;
     this.renderedElement &&
@@ -273,6 +273,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
             elementWidth: width,
             elementHeight: height,
           });
+          console.log({ ...this.props });
         }
       );
   };
